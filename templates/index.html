@@ -1,0 +1,24 @@
+
+{% block head %}
+<title>1RM Calculator</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    
+    <h1 style="text-align: center">One repetition maximum calculator</h1>
+
+    <form action="/" method="POST" style="text-align: center">
+        <label for="Repetitions">Repetitions</label><br>
+        <input type = "text" name = "Repetitions"><br>
+        <label for="Weight (Kg)">Weight (Kg)</label><br>
+        <input type = "text" name = "Weight (Kg)"><br>
+        <input type = "submit" value = "Calculate"><br>
+    </form>
+
+    {% if rm %}
+    <p>Your maximum repetition is with {{rm}} Kg</p>
+    {% endif %}
+
+</div>
+{% endblock %}
